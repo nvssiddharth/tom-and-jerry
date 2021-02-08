@@ -25,14 +25,12 @@ function setup(){
     cat=createSprite(700,600);
     cat.addImage("sitting",catImg);
     cat.scale=0.1;
-    cat.debug=true
     cat.setCollider("rectangle",0,0,750,750);
 
     //creating the mouse
     mouse=createSprite(100,600);
     mouse.addImage("holdingCheese",mouseImg);
     mouse.scale=0.1;
-    mouse.debug=true
     mouse.setCollider("rectangle",0,0,750,750);
 }
 
