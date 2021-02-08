@@ -65,7 +65,7 @@ function draw() {
 
     //when left arrow key is pressed
     function catMoving(){
-        if(keyCode===LEFT_ARROW){
+        if(keyDown("space")){
             cat.velocityX=-5;
             cat.changeAnimation("walking");
             mouse.changeAnimation("teasing");
