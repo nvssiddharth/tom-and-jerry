@@ -24,18 +24,16 @@ function setup(){
     //creating the cat
     cat=createSprite(700,600);
     cat.addImage("sitting",catImg);
-    cat.addAnimation("walking",catImg2);
-    cat.addImage("standing",catImg3);
     cat.scale=0.1;
-    cat.setCollider("rectangle",0,0,900,900);
+    cat.debug=true
+    cat.setCollider("rectangle",0,0,750,750);
 
     //creating the mouse
     mouse=createSprite(100,600);
     mouse.addImage("holdingCheese",mouseImg);
-    mouse.addAnimation("teasing",mouseImg2);
-    mouse.addImage("looking",mouseImg3);
     mouse.scale=0.1;
-    mouse.setCollider("rectangle",0,0,900,900);
+    mouse.debug=true
+    mouse.setCollider("rectangle",0,0,750,750);
 }
 
 function draw() {
@@ -54,7 +52,9 @@ function draw() {
     //when cat touches the mouse
     if(cat.x - mouse.x <= (cat.width + mouse.width)/2){
         cat.velocityX=0;
+        cat.addImage("standing",catImg3);
         cat.changeImage("standing");
+        mouse.addImage("looking",mouseImg3);
         mouse.changeImage("looking");
     }
 
@@ -65,9 +65,11 @@ function draw() {
 
     //when left arrow key is pressed
     function catMoving(){
-        if(keyDown("space")){
+        if(keyDown(LEFT_ARROW)){
             cat.velocityX=-5;
+            cat.addAnimation("walking",catImg2);
             cat.changeAnimation("walking");
+            mouse.addAnimation("teasing",mouseImg2);
             mouse.changeAnimation("teasing");
         }
     }
