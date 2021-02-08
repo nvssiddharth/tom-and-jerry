@@ -6,13 +6,13 @@ var garden,gardenImg;
 function preload() {
 
     //loading the images
-    catImg=loadImage("images/cat1.png");
-    catImg2=loadAnimation("images/cat2.png","images/cat3.png");
-    catImg3=loadImage("images/cat4.png");
-    mouseImg=loadImage("images/mouse1.png");
-    mouseImg2=loadAnimation("images/mouse2.png","images/mouse3.png");
-    mouseImg3=loadImage("images/mouse4.png");
-    gardenImg=loadImage("images/garden.png");
+    catImg=loadImage("cat1.png");
+    catImg2=loadAnimation("cat2.png","cat3.png");
+    catImg3=loadImage("cat4.png");
+    mouseImg=loadImage("mouse1.png");
+    mouseImg2=loadAnimation("mouse2.png","mouse3.png");
+    mouseImg3=loadImage("mouse4.png");
+    gardenImg=loadImage("garden.png");
    
 }
 
