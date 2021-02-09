@@ -45,8 +45,9 @@ function draw() {
     text(mouseX +','+ mouseY,350,100);
 
     //when cat touches the mouse
-    if(cat.x - mouse.x <= (cat.width + mouse.width)/2){
+    if(cat.x - mouse.x < (cat.width - mouse.width)/2){
         cat.velocityX=0;
+        cat.x=200;
         cat.addImage("standing",catImg3);
         cat.changeImage("standing");
         mouse.addImage("looking",mouseImg3);
