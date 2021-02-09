@@ -38,9 +38,6 @@ function draw() {
 
     //colour of the background
     background(gardenImg);
-
-    //calling the function
-    keyPressed();
     
     //position of the your mouse on the monitor
     textSize(20);
@@ -63,7 +60,7 @@ function draw() {
 
     //when left arrow key is pressed
     function keyPressed(){
-        if(keyDown(LEFT_ARROW)){
+        if(keyCode===LEFT_ARROW){
             cat.velocityX=-5;
             cat.addAnimation("walking",catImg2);
             cat.changeAnimation("walking");
